@@ -1,0 +1,53 @@
+/*body styling*/
+body {
+    font-family: 'Times New Roman', Times, serif !important;
+     background-image: radial-gradient(#021173, #23637c, rgb(9, 58, 60))!important;
+    /*Gradient*/
+    color: #fff !important;
+    /*White text*/
+    margin: 0 !important;
+}
+
+/*header styling*/
+header {
+    font-family: 'Times New Roman', Times, serif !important;
+    color: #F2AC29 !important;
+}
+
+
+/*navigation links styling*/
+nav a {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #d7b71a !important;
+    font-size: 18px !important;
+}
+
+.film-bg {
+    background-image: url('/images/Film.jpg') !important;
+}
+
+
+/*article styling*/
+article {
+    font-family: 'Times New Roman', Times, serif !important;
+    padding-bottom: 30px !important;
+    color:#d7b71a !important;
+    /*spacing for top and bottom*/
+    font-size: 20px !important;
+}
+
+/* Banner-style cover image for home page */
+.image1 {
+    width: 100vw;
+    max-width: 100vw;
+    height: 40vh;
+   
+    /* fill the banner while preserving aspect ratio (cropping allowed) */
+    background-size: cover;
+    background-position: center center;  
+}
+
+
+
+
+

@@ -1,0 +1,37 @@
+ <!--Navigation to the different pages-->
+ <nav class="navbar navbar-expand-lg navbar-dark film-bg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Rate My Flix</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <% if (title == "Home") {%>
+          <a class="nav-link active" aria-current="page" href="/home"><i class="fa-regular fa-lg fa-house"></i> Home</a>
+          <%} else {%>
+            <a class="nav-link" aria-current="page" href="/home"><i class="fa-regular fa-house"></i> Home</a>
+          <%} %>
+        </li>
+
+        <li class="nav-item">
+          <% if (title == "Movies") {%>
+          <a class="nav-link active" aria-current="page" href="/movies"><i class="fa-solid fa-lg fa-film"></i> Movies</a>
+          <%} else {%>
+            <a class="nav-link" aria-current="page" href="/movies"><i class="fa-solid fa-film"></i></i> Movies</a>
+          <%} %>
+        </li>
+
+        <li class="nav-item">
+          <% if (title == "About") {%>
+          <a class="nav-link active" aria-current="page" href="/about"><i class="fa-solid fa-lg fa-info"></i></i> About</a>
+          <%} else {%>
+            <a class="nav-link" aria-current="page" href="/about"><i class="fa-solid fa-info"></i></i> About</a>
+          <%} %>
+        </li>
+
+
+    </div>
+  </div>
+</nav>
