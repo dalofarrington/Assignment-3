@@ -1,0 +1,53 @@
+<%-include ../partials/header.ejs %>
+    <%-include ../partials/main_nav.ejs %>
+
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-3 col-md-6">
+                    <h1>
+                        <%= title %>
+                    </h1>
+
+                    <form class="form" method="post" action="/movies/edit/<%= movie._id %>">
+                        <div class="form-group">
+                            <label for="titleTextField">Movie Title</label>
+                            <input type="text" class="form-control" id="titleTextField"
+                                placeholder="Enter the name of the movie" name="title" value="<%=movie.title%>"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="genreTextField">Genre</label>
+                            <input type="text" class="form-control" id="genreTextField"
+                                placeholder="Enter the genre of the movie" name="genre" value="<%=movie.genre%>"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateTextField">Date</label>
+                            <input type="date" class="form-control" id="dateTextField"
+                                placeholder="Enter the date you watched the movie" name="date" value="<%= movie.date ? (new Date(movie.date)).toISOString().slice(0,10) : '' %>"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="detailsTextArea">Details</label>
+                            <textarea type="text" class="form-control" id="detailsTextArea" placeholder="Enter the details of the movie" name="details" required><%= movie.details %></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ratingTextField">Rating</label>
+                            <input type="number" class="form-control" id="ratingTextField"
+                                placeholder="Enter the rating of the movie" name="rating" value="<%=movie.rating%>"
+                                required>
+                        </div>
+                        <br>
+                        <button class="btn btn-primary" type="submit"> Submit
+                        </button>
+                        <a href="/movies" class="btn btn-warning">
+                            <i class="fas fa-undo"></i> Cancel
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%-include ../partials/footer.ejs %>
