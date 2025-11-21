@@ -1,18 +1,45 @@
 <%- include ./partials/header.ejs %>
-<%- include ./partials/main_nav.ejs %>
-   <article>
-    <figure>
-            <img src="/Asset/images/Cover.jpg" alt="cover image" class="image1">
-            <section>
-            <h2>Welcome to RateMyFlix!</h2>
-            <p>
-             RateMyFlix is a web application that allows users to rate and review movies.
-            Whether you're a casual moviegoer or a die-hard cinephile, RateMyFlix provides a platform for you to share your thoughts and opinions on the latest releases and classic films.
-            Give your favorite movies the recognition they deserve, help others discover hidden gems, or help them avoid a terrible time!
-            </p>
-        </section>
+        <%- include ./partials/main_nav.ejs %>
+                <article>
+                        <figure>
+                                <img src="/Asset/images/Cover.jpg" alt="cover image" class="image1">
+                        </figure>
+                        <div class="container-fluid p-4">
+                        <section>
+                                <h2>Welcome to RateMyFlix!</h2>
+                                <p>
+                                        RateMyFlix is a web application that allows users to rate and review movies.
+                                        Whether you're a casual moviegoer or a die-hard cinephile, RateMyFlix provides a
+                                        platform for you to share your thoughts and opinions on the latest releases and
+                                        classic films.
+                                        Give your favorite movies the recognition they deserve, help others discover
+                                        hidden gems, or help them avoid a terrible time!
+                                </p>
+                        </section>
+                        <div class="row display-flex justify-content-center">
+                        <div class="col-auto card m-4" style="width: 18rem;">
+                                <img class="card-img-top" src="/Asset/images/20thCenturyFox.png" alt="Card image cap">
+                                <div class="card-body">
+                                        <a href="/movies/add" class="btn btn-primary">Rate a Movie!</a>
+                                </div>
+                        </div>
 
-<%- include ./partials/footer.ejs %>
-</body>
+                        <div class="col-auto card m-4" style="width: 18rem;">
+                                <img class="card-img-top" src="/Asset/images/Universal.png" alt="Card image cap">
+                                <div class="card-body">
+                                        <a href="/movies" class="btn btn-primary">View your Ratings</a>
+                                </div>
+                        </div>
 
-</html>
+                        <div class="col-auto card m-4" style="width: 18rem;">
+                                <img class="card-img-top" src="/Asset/images/Paramount.png" alt="Card image cap">
+                                <div class="card-body">
+                                        <a href="/about" class="btn btn-primary">About me!</a>
+                                </div>
+                        </div>
+                     </div>
+                  </div>
+                <br>
+                </article>
+
+                <%- include ./partials/footer.ejs %>

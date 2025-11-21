@@ -34,13 +34,21 @@ article {
     color:#d7b71a !important;
     /*spacing for top and bottom*/
     font-size: 20px !important;
+    text-align: center !important;
+}
+
+/* centers articles */
+article figure,
+article h2,
+article p {
+    text-align: center !important;
 }
 
 /* Banner-style cover image for home page */
 .image1 {
     width: 100vw;
     max-width: 100vw;
-    height: 40vh;
+    height: 30vh;
    
     /* fill the banner while preserving aspect ratio (cropping allowed) */
     background-size: cover;
