@@ -1,0 +1,59 @@
+<%- include ../partials/header.ejs %>
+    <%- include ../partials/main_nav.ejs %>
+        <main class="container">
+            <div class="row">
+                <div class="offset-md-1 col-md-10">
+                    <h1>
+                        <%= title %>
+                    </h1>
+                    <a href="/movies/add" class="btn btn-primary btn-lg mt-3">
+                        <i class="fas fa-plus"></i> Rate a Movie
+                    </a>
+                    <table class="table table-bordered table-striped table-hover">
+                        <!-- Header Row -->
+                        <tr class="d-flex">
+                            <th class="text-center col-2">Title</th>
+                            <th class="text-center col-2">Genre</th>
+                            <th class="text-center col-1">Date Watched</th>
+                            <th class="col-4">Details</th>
+                            <th class="text-center col-1">Rating</th>
+                            <th class="text-center col-1"></th>
+                            <th class="text-center col-1"></th>
+                        </tr>
+                        <% for(let count=0; count<MovieList.length;count++) { %>
+                            <tr class="d-flex">
+                                <td class="text-center col-2">
+                                    <%= MovieList[count].title %>
+                                </td>
+                                <td class="text-center col-2">
+                                    <%= MovieList[count].genre %>
+                                </td>
+                                <td class="text-center col-1">
+                                    <%= MovieList[count].date %>
+                                </td>
+                                <td class="col-4">
+                                    <%= MovieList[count].details %>
+                                </td>
+                                <td class="text-center col-1">
+                                    <%= MovieList[count].rating %>
+                                </td>
+                                <td class="text-center col-1">
+                                    <a href="/movies/edit/<%= MovieList[count]._id%>" class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i> Edit
+                                    </a>
+                                </td>
+                                <td class="text-center col-1">
+                                    <a href="/movies/delete/<%= MovieList[count]._id %>" class="btn btn-danger btn-sm"
+                                        onclick="return confirm('Confirm to delete your rating');">
+                                        Delete
+                                    </a>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+
+        <%-include ../partials/footer.ejs %>

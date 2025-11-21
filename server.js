@@ -3,8 +3,10 @@
 /**
  * Module dependencies.
  */
-
-var app = require('./app');
+/* 
+Create, Read, Update, Delete --> CRUD Operation
+*/
+var app = require('./server/config/app');
 var debug = require('debug')('webproject:server');
 var http = require('http');
 
