@@ -1,10 +1,16 @@
+<!--
+Landing/home page for the site.
+
+-->
 <%- include ./partials/header.ejs %>
-        <%- include ./partials/main_nav.ejs %>
+                                <%- include ./partials/main_nav.ejs %>
+                                <!--Creates scover image for home page -->
                 <article>
                         <figure>
                                 <img src="/Asset/images/Cover.jpg" alt="cover image" class="image1">
                         </figure>
                         <div class="container-fluid p-4">
+                                <!--Section containing welcome information -->
                         <section>
                                 <h2>Welcome to RateMyFlix!</h2>
                                 <p>
@@ -16,6 +22,7 @@
                                         hidden gems, or help them avoid a terrible time!
                                 </p>
                         </section>
+                        <!--Cards leading to other pages from bootstrap -->
                         <div class="row display-flex justify-content-center">
                         <div class="col-auto card m-4" style="width: 18rem;">
                                 <img class="card-img-top" src="/Asset/images/20thCenturyFox.png" alt="Card image cap">

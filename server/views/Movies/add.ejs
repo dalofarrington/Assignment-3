@@ -1,3 +1,10 @@
+<!--
+    Movies/add.ejs
+    Purpose: Form to add a new movie rating.
+    Expected locals:
+        - title: string (page title)
+    Notes: The form posts to `/movies/add` and expects fields: title, genre, date, details, rating.
+-->
 <%-include ../partials/header.ejs %>
 <%-include ../partials/main_nav.ejs %>
 
@@ -5,7 +12,7 @@
     <div class="row">
         <div class="offset-md-3 col-md-6">
             <h1><%= title %></h1>
-
+<!--allows user to add movie name and post to list -->
             <form class="form" method="post" action="/movies/add">
                 <div class="form-group">
                     <label for="titleTextField">Movie Title</label>
@@ -14,6 +21,7 @@
                     placeholder="Enter the name of the movie"
                     name="title" required>
                 </div>
+<!--allows user to add genre and post to list -->
                  <div class="form-group">
                     <label for="genreTextField">Genre</label>
                     <input type="text" class="form-control"
@@ -21,7 +29,7 @@
                     placeholder="Enter the genre of the movie"
                     name="genre" required>
                 </div>
-
+<!--allows user to add date watched and post to list -->
                 <div class="form-group">
                     <label for="dateTextField">Date</label>
                     <input type="date" class="form-control"
@@ -29,7 +37,7 @@
                     placeholder="Enter the date you watched the movie"
                     name="date" required>
                 </div>
-
+<!--allows user to add details and post to list -->
                 <div class="form-group">
                     <label for="detailsTextArea">Details</label>
                     <textarea type="text" class="form-control"
@@ -37,15 +45,16 @@
                     placeholder="Enter the details of the movie"
                     name="details" required></textarea>
                 </div>
-
+<!--allows user to add movie rating and post to list -->
                 <div class="form-group">
                     <label for="ratingTextField">Rating</label>
                     <input type="number" class="form-control"
                     id="ratingTextField"
-                    placeholder="Enter the rating of the movie"
+                    placeholder="Enter the rating of the movie out of 10"
                     name="rating" required>
                 </div>
                 <br>
+<!--Creates submit and edit button -->
                 <button class="btn btn-primary" type="submit"> Submit
                 </button>
                 <a href="/movies" class="btn btn-warning">

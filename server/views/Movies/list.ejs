@@ -1,5 +1,7 @@
+<!--Show a table of all rated movies.-->
+     
 <%- include ../partials/header.ejs %>
-    <%- include ../partials/main_nav.ejs %>
+        <%- include ../partials/main_nav.ejs %>
         <main class="container">
             <div class="row">
                 <div class="offset-md-1 col-md-10">
@@ -20,6 +22,7 @@
                             <th class="text-center col-1"></th>
                             <th class="text-center col-1"></th>
                         </tr>
+                        <!--Loop through MovieList and render each movie as a table row --> 
                         <% for(let count=0; count<MovieList.length;count++) { %>
                             <tr class="d-flex">
                                 <td class="text-center col-2">
